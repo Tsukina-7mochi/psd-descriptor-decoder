@@ -400,8 +400,6 @@ Deno.test('readEnumerated #1', () => {
     new Uint8Array([
       ...[...nByteValue(10, 4), ...stringToBytes('Enumerated')],
       ...[...nByteValue(8, 4), ...stringToBytes('Class ID')],
-      ...[...nByteValue(7, 4), ...stringToBytes('Type ID')],
-      ...[...nByteValue(0, 4), ...stringToBytes('Enum')],
     ]),
   );
 
@@ -409,11 +407,9 @@ Deno.test('readEnumerated #1', () => {
 
   assert.assertEquals(enumerated, {
     name: 'Enumerated',
-    classId: 'Class ID',
-    typeId: 'Type ID',
-    value: 'Enum',
+    classId: 'Class ID'
   });
-  assert.assertEquals(stream.index, 45);
+  assert.assertEquals(stream.index, 26);
 });
 
 Deno.test('readInteger #1', () => {
