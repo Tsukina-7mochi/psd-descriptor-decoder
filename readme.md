@@ -6,4 +6,4 @@ Decoder for Description data structure used in Actions and Slices in Adobe Photo
 
 ## Usage
 
-See `main.ts`.
+See `src/main.ts`.
