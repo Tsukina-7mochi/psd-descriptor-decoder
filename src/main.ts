@@ -35,8 +35,6 @@ const binary = await (async () => {
   }
 })();
 
-console.log(binary);
-
 const stream = new ActionStream(binary);
 
 console.log(JSON.stringify(stream.readDescriptor()));
